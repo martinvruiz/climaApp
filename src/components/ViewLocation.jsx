@@ -20,7 +20,9 @@ const ViewLocation = () => {
         </View>
       ) : (
         <View className="w-full bg-gray-400 rounded-lg items-center justify-center p-2">
-          <Text className="text-2xl font-montserratRegular">No hay datos</Text>
+          <Text className="text-2xl font-montserratRegular w-full text-center">
+            No hay datos
+          </Text>
         </View>
       )}
     </View>

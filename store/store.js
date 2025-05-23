@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 const useStore = create((set) => ({
-  location: '',
+  location: 'Buenos Aires',
   input: '',
   data: null,
   setData: (data) => set(() => ({ data })),

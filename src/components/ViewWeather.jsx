@@ -4,16 +4,20 @@ import useStore from '../../store/store'
 const ViewWeather = () => {
   const data = useStore((state) => state.data)
   return (
-    <View className="w-full bg-gray-500 rounded-lg items-center justify-center mt-2 p-2 shadow-lg">
+    <View
+      className={`w-full rounded-lg items-center justify-center mt-2 p-2 shadow-lg${
+        data.current.temp_c > 25 ? ' bg-orange-500' : ' bg-blue-500'
+      }`}
+    >
       {data ? (
         <View className="w-full items-center justify-center gap-1">
           <Image
             source={{ uri: `https:${data.current.condition.icon}` }}
-            className="w-28 h-28"
+            className="w-32 h-32"
             resizeMode="cover"
           />
-          <Text className="text-3xl font-montserratBold text-white">
-            {data.current.temp_c}°C
+          <Text className="text-5xl font-montserratBold text-white">
+            {data.current.temp_c} °C
           </Text>
           <Text className="text-2xl text-white font-montserratRegular">
             {data.current.condition.text}
