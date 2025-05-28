@@ -17,10 +17,14 @@ export default function App() {
     Montserrat_Bold: Montserrat_700Bold,
   })
 
+  if (!loaded) {
+    return null
+  }
+
   return (
     <SafeAreaProvider>
       <SafeAreaView
-        className="h-screen w-screen bg-orange-200 items-center"
+        className="h-full w-screen bg-orange-200 items-center p-2"
         style={styles.container}
       >
         <View className="h-full w-full items-center">
