@@ -16,19 +16,19 @@ const ViewWeather = () => {
             className="w-32 h-32"
             resizeMode="cover"
           />
-          <Text className="text-5xl font-montserratBold text-white">
+          <Text className="text-5xl md:text-4xl font-montserratBold text-white">
             {data.current.temp_c} °C
           </Text>
-          <Text className="text-2xl text-white font-montserratRegular">
+          <Text className="text-2xl md:text-xl text-white font-montserratRegular">
             {data.current.condition.text}
           </Text>
-          <Text className="text-xl text-white font-montserratRegular">
+          <Text className="text-xl md:text-lg text-white font-montserratRegular">
             Humedad: {data.current.humidity}%
           </Text>
-          <Text className="text-xl text-white font-montserratRegular">
+          <Text className="text-xl md:text-lg text-white font-montserratRegular">
             Nubes: {data.current.cloud}%
           </Text>
-          <Text className="text-xl text-white font-montserratRegular">
+          <Text className="text-xl md:text-lg text-white font-montserratRegular">
             Actualizado: {data.current.last_updated}
           </Text>
         </View>

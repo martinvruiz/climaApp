@@ -2,7 +2,7 @@ import { View, StyleSheet, StatusBar } from 'react-native'
 import './global.css'
 import useAPI from './src/hooks/useAPI'
 import Home from './screens/Home'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 import { Platform } from 'react-native'
 import { API_KEY } from '@env'
 import { useFonts } from 'expo-font'
@@ -18,14 +18,16 @@ export default function App() {
   })
 
   return (
-    <SafeAreaView
-      className="h-screen w-screen bg-orange-200"
-      style={styles.container}
-    >
-      <View>
-        <Home />
-      </View>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView
+        className="h-screen w-screen bg-orange-200 items-center"
+        style={styles.container}
+      >
+        <View className="h-full w-full items-center">
+          <Home />
+        </View>
+      </SafeAreaView>
+    </SafeAreaProvider>
   )
 }
 

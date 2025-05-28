@@ -23,7 +23,7 @@ const InputForm = () => {
   }
 
   return (
-    <View className="w-screen items-center bg-orange-200">
+    <View className="w-full items-center bg-orange-200">
       <View className="w-full px-6 py-4">
         <InputLocation location={input} onChangeText={setInput} />
       </View>

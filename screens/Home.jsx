@@ -1,16 +1,21 @@
-import { View } from 'react-native'
+import { View, ScrollView } from 'react-native'
 import Header from '../src/components/Header'
 import InputForm from '../src/components/InputForm'
 import ViewLocation from '../src/components/ViewLocation'
 
 const Home = () => {
   return (
-    <View className="h-screen w-screen items-center bg-orange-200">
-      <Header title="Weather App" />
-      <View>
-        <InputForm />
-      </View>
-      <ViewLocation />
+    <View className="h-full w-full items-center bg-orange-200">
+      <ScrollView
+        className="w-screen md:w-3/5 bg-orange-200"
+        showsHorizontalScrollIndicator={false}
+      >
+        <Header title="Weather App" />
+        <View>
+          <InputForm />
+        </View>
+        <ViewLocation />
+      </ScrollView>
     </View>
   )
 }
