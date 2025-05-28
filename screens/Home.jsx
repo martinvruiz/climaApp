@@ -10,7 +10,7 @@ const Home = () => {
         className="w-screen md:w-3/5 bg-orange-200"
         showsHorizontalScrollIndicator={false}
       >
-        <Header title="Weather App" />
+        <Header title="Clima App" />
         <View>
           <InputForm />
         </View>
